@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+    <script>
+//first q- write function that take 2 number and return 2 number--only 2 number
+//this case -we know excactly how many number use this 
+
+function sum(num1, num2){
+    return num1+num2 
+     
+}
+console.log("add", sum(4,3))
+// document.write(sum(3,5))
+
+//q2 write function that takes any number of arguments of two number and retuen the sum of all the arguments
+//can have any number value
+//...array that have any number
+//this case =we donot know how many input user will insert-we donot know- and give total we need this format
+
+function sumTwo(...args){
+
+let total = 0;
+for(let i=0; i< args.length; i++){
+    total = total+args[i]
+}
+return total
+
+}
+document.write(sumTwo(3,5,8,9))
+
+
+//q3 write a function that take two string a snd b and return whether b is in A  in case insensitive way
+//check in second string found on the first string
+
+function checkString(string1, string2){
+return string1.toLowerCase().includes(string2.toLowerCase())
+//use inludes()function to check true or false
+}
+//video 32.5 mins
+console.log(checkString("hello world", "h"))
+
+
+//q4 extract name object that sent info from user and you pick up value
+//(arr) get array from user
+function getName(arr){
+    var newArr = []
+for(i=0;i<arr.length;i++){
+    //.hasOwnProperty is function to check if have name property
+    if (arr[i].hasOwnProperty('name')){
+        //if find name property it push to store in new array
+        newArr.push(arr[i].name)
+    }
+}
+return newArr
+}
+    console.log(getName([
+       
+            {a: 1 },
+                {name:"Jane"  },
+                    {name:"Mark"  },
+                      {name:"sphia"  },
+                       {a: 2 },
+       
+    ])
+
+    )
+
+
+
+
+
+    //if array inside fuction
+    function checkLetter(){
+var arr = 
+       [
+            {a: 1 },
+                {name:"Jane"  },
+                    {name:"Mark"  },
+                      {name:"sphia"  },
+                       {a: 2 },
+       
+    ]
+    var newArr = []
+for(i=0;i<arr.length;i++){
+    //.hasOwnProperty is function to check if have name property
+    if (arr[i].hasOwnProperty('a')){
+        //if find name property it push to store in new array
+        newArr.push(arr[i].name)
+    }
+    }
+ return newArr
+    }
+   console.log(checkLetter())
+
+
+   // next to return paramter and return value go over it agin
+    </script>
+    
+</body>
+</html>
