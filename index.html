@@ -94,15 +94,45 @@ for(i=0;i<arr.length;i++){
     //.hasOwnProperty is function to check if have name property
     if (arr[i].hasOwnProperty('a')){
         //if find name property it push to store in new array
-        newArr.push(arr[i].name)
+        newArr.push(arr[i].a)
     }
     }
- return newArr
+alert (newArr)
     }
-   console.log(checkLetter())
+checkLetter()
 
 
-   // next to return paramter and return value go over it agin
+
+
+
+//sample from youtube
+    function checkLetter2(arr){
+
+    var newArr = []
+for(i=0;i<arr.length;i++){
+    //.hasOwnProperty is function to check if have name property
+    if (arr[i].hasOwnProperty('a')){
+        //if find name property it push to store in new array
+        newArr.push(arr[i].a)
+    }
+    }
+alert (newArr)
+    }
+    var arr = 
+       [
+            {a: 1 },
+                {name:"Jane"  },
+                    {name:"Mark"  },
+                      {name:"sphia"  },
+                       {a: 2 },
+       
+    ]
+checkLetter2(arr)
+
+
+
+
+
     </script>
     
 </body>
